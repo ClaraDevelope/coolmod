@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@300;500&display=swap');
+:root{
+  --background-body: #f0eeee;
+  --white: #fff;
+  --emphasis: #ff9327;
+  --primary: black;
+  --secondary: #272727;
+  --text: #212529;
+  --shadow: #707070;
+  --orange: orange;
+  --dark: #262626;
+}
+
+body{
+  font-family: 'Roboto Flex', sans-serif;
+  color: var(--text);
+  line-height: 1.5;
+  box-sizing: border-box;
+  margin: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+header{
+  background-color: var(--white);
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+#first > nav{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#first{
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+}
+
+#toggle-menu-logo{
+  display: none;
+}
+
+#logo{
+  max-width: 100%;
+}
+#logo > img{
+  height: 50px;
+  width: 190px;
+}
+#search-bar{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  margin: 30px;
+}
+.search-product{
+  flex-grow: 1;
+}
+#search-bar > button{
+  cursor: pointer;
+  border-radius: 5%;
+  background-color: var(--emphasis);
+  border: none;
+  font-size: 16px;
+  color: var(--white);
+}
+#search-bar > button:hover{
+  opacity: 80%;
+  transform: scale(1.05);
+}
+
+.personal{
+  cursor: pointer;
+  max-width: 100%;
+  display: flex;
+}
+
+
+#log-in{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#log-in > img{
+  width: 20px;
+  height: 20px;
+}
+
+#log-in > button{
+  min-width: 120px;
+  background-color: var(--white);
+  font-weight: 700;
+  border: none;
+}
+
+#shopping{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#shopping > img{
+  width: 30px;
+  height: 30px;
+}
+
+#shopping > button{
+ margin-right: 30px;
+ margin-left: 30px;
+ background-color: var(--white);
+ font-weight: 700;
+ border: none;
+}
+
+#second{
+  width: 100%;
+}
+
+#second > nav{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+#our-products{
+  display: flex;
+  justify-content: center;
+  background-color: var(--emphasis);
+  position: relative;
+}
+
+#our-products > button{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--emphasis);
+  color: var(--white);
+  border: none;
+}
+
+.hamburger{
+  width: 20px;
+  height: 20px;
+}
+.expand{
+  width: 20px;
+  height: 20px;
+}
+
+.dropdown-menu{
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  list-style: none;
+  font-size: 13px;
+  background-color: var(--background-body);
+  width: 22%;
+  margin: 0 auto;
+}
+.dropdown-menu > li > a{
+  color: var(--text);
+  margin: 10px auto;
+  font-family:'Roboto Flex', sans-serif;
+  line-height: 2;
+}
+
+#our-products:hover ~ .dropdown-menu {
+  display: block;
+}
+
+button:hover > .dropdown-menu{
+  display: block;
+  text-align: center;
+}
+
+.dropdown-menu > li{
+  transition: 0.5s;
+}
+
+.dropdown-menu > li:hover {
+  background-color: var(--emphasis);
+}
+
+button > .dropdown-menu{
+  width: 22vw;
+  right: 0.2vw;
+  top: 0;
+  margin-top: 55px;
+}
+
+
+#type-pc{
+  background-color: var(--dark);
+  padding-right: 40px;
+}
+
+#type-pc > ul{
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
+ 
+  color: var(--white);
+}
+#type-pc > ul > li{
+  margin-left: 10px;
+}
+#promotions{
+  display: flex;
+  justify-content: center;
+  background-color: var(--emphasis);
+  position: relative;
+}
+
+#promotions > button{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--emphasis);
+  color: var(--white);
+  border: none;
+}
+
+main{
+  background-color: var(--background-body);
+  display: flex;
+  margin: 0;
+}
+
+#products-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#products-container ul{
+  display: flex;
+  align-items: flex-end;
+  list-style: none;
+  box-shadow: 2px 2px 6px 0 #707070;
+  background-color: white;
+  margin: 0.5%;
+  max-width: 24%;
+  /* width: 100%; */
+}
+
+#products-container > ul > li{
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#products-container > ul:hover > :not(:hover) {
+  scale: 1.05;
+}
+
+#products-container img{
+  margin: 15px auto;
+  max-width: 170px;
+  max-height: 170px;
+  height: 100%;
+  width: 100%;
+}
+
+#products-container button{
+  cursor: pointer;
+  border-radius: 5%;
+  margin-bottom: 20px;
+  padding: 7px;
+  font-size: 15px;
+  background-color: var(--emphasis);
+  color: var(--white);
+  border: none;
+}
+
+#products-container button:hover{
+  opacity: 80%;
+  transform: scale(1.05);
+}
+
+#filters{
+
+  display: flex;
+  flex-direction: column;
+  margin-top: 120px;
+  padding-right: 20px;
+  margin-left: 20px;
+
+}
+
+#filters > select{
+  width: 200px;
+}
+
+#priceFilter{
+  align-content: center;
+  margin-top: 90px;
+  transition: 0.5s;
+}
+
+#priceFilter:hover{
+  transform: scale(1.1);
+}
+#selectedPrice{
+  display: block;
+  text-align:justify;
+  margin: 0;
+}
+
+#clean{
+  border: 1px solid var(--shadow);
+  border-radius: 5%;
+  background-color: var(--white);
+  margin: 50px;
+  padding: 7px;
+}
+#clean:hover{
+  transition: 0.7s;
+  opacity: 95%;
+  transform: scale(1.1);
+  background-color: var(--emphasis);
+}
+
+@media screen and (max-width: 1150px) {
+#first{
+  background-color: var(--background-body);
+}
+#log-in > button{
+  background-color: var(--background-body);
+}
+#shopping > button{
+  background-color: var(--background-body);
+}
+#second {
+  display: none;
+ }
+ #logo{
+  display: flex;
+ }
+ #toggle-menu-logo{
+  display: block
+ }
+ #logo > #toggle-menu-logo{
+  width: 50px;
+  height: 50px;
+  cursor: pointer
+ }
+ main{
+  flex-direction: column;
+}
+#products-container{
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+#products-container ul{
+  max-width: 100%;
+  margin-left: 20px;
+}
+#filters{
+  margin-left: 35px;
+}
+}
+@media screen and (max-width: 800px){
+  #log-in{
+    display: none;
+  }
+  #shopping{
+    display: none;
+  }
+}
+
+

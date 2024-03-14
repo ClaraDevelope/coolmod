@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="shortcut icon" href="./assets/icon-coolmod-200x200.jpg" type="image/x-icon">
+  <title>CoolMod</title>
+</head>
+
+<body>
+  <header>
+    <section id="first">
+      <nav>
+        <div id="logo">
+          <img src="https://www.coolmod.com/images/logos/logo_coolmod.png" alt="coolmod">
+          <img src="./assets/menu_FILL0_wght400_GRAD0_opsz48.png" alt="menu" class="hamburger" id="toggle-menu-logo">
+        </div>
+        <div id="search-bar">
+          <input type="text" class="search-product">
+          <button class="search-button">🔍BUSCAR</button>
+        </div>
+        <div class="personal">
+          <div id="log-in">
+            <img src="./assets/user.png" alt="user" class="user-logo">
+            <button>INICIAR SESION</button>
+          </div>
+          <div id="shopping">
+            <img src="./assets/shopping-cart.png" alt="carrito" class="shopping-logo">
+            <button>CARRITO</button>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <section id="second">
+      <nav>
+        <div id="our-products">
+          <button>
+            <img src="./assets/menu_FILL0_wght400_GRAD0_opsz48.png" alt="menu" class="hamburger">
+            <h3>NUESTROS PRODUCTOS</h3>
+            <img src="./assets/expand_more_FILL0_wght400_GRAD0_opsz48.png" alt="expand" class="expand">
+            <ul class="dropdown-menu">
+              <li><a href="#">PCs y portátiles</a></li>
+              <li><a href="#">Componentes y software</a></li>
+              <li><a href="#">Periféricos y conectividad</a></li>
+              <li><a href="#">Gaming y consolas</a></li>
+              <li><a href="#">Refrigeración líquida</a></li>
+              <li><a href="#">Imagen y sonido</a></li>
+              <li><a href="#">Smartphones y telefonía</a></li>
+              <li><a href="#">Electrohogar y oficina</a></li>
+            </ul>
+          </button>
+        </div>
+        <div id="type-pc">
+          <ul>
+            <li>COOLPCS<a href="#"></a></li>
+            <li>CONFIGURA TU PC<a href="#"></a></li>
+            <li>PORTATILES GAMING<a href="#"></a></li>
+            <li>NVIDIA<a href="#"></a></li>
+          </ul>
+        </div>
+        <div id="promotions">
+          <button>
+            <h3>PROMOS Y DESCUENTOS</h3>
+            <img src="./assets/expand_more_FILL0_wght400_GRAD0_opsz48.png" alt="expand" class="expand">
+            <ul class="dropdown-menu" id="second-dropdown-menu">
+              <li><a href="#">Descuble nuestras promociones</a></li>
+              <li><a href="#">Los ultimos descuentos</a></li>
+              <li><a href="#">Nuestras novedades</a></li>
+              <li><a href="#">Relacionados</a></li>
+            </ul>
+          </button>
+        </div>
+      </nav>
+    </section>
+  </header>
+  <main>
+    <section id="products-container"></section>
+    <section id="filters">
+      <label for="seller">Vendedores</label>
+      <select name="seller" id="sellerFilter">
+        <option value="all" id="all">Todos</option>
+      </select>
+      <input type="number" name="priceFilter" id="priceFilter">
+      <span id="selectedPrice">euros</span>
+      <input type="reset" value="Limpiar filtros" id="clean">
+    </section>
+  </main>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
